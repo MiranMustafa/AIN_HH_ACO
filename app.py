@@ -12,7 +12,7 @@ solver = Solver()
 directory = os.listdir('input')
 
 instance_files = [
-    "b_read_on.txt",
+    # "b_read_on.txt",
     # "c_incunabula.txt",
     # "e_so_many_books.txt",
     # "d_tough_choices.txt",

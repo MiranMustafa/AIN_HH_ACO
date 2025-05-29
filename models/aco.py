@@ -122,7 +122,6 @@ class AntColonyOptimizer:
     def run(self):
         """
         Execute the ACO algorithm, return the best found Solution.
-        Assumes Solution.add_library(library_id, book_ids) is available.
         """
         best_score = 0
         best_path = []
