@@ -53,7 +53,7 @@ This solver is especially useful for large and complex instances where a single 
 
 ## Ant Colony Optimization (ACO) Solver
 
-The `ACOOptimizer` and `AntColonyOptimizer` classes implement Ant Colony Optimization (ACO) algorithms for refining solutions to the Book Scanning (library scheduling) problem. These solvers attempt to find an optimal or near-optimal order in which to sign up libraries, maximizing the total score of scanned books within the given time constraints.
+The `AntColonyOptimizer` class implements Ant Colony Optimization (ACO) algorithm for refining solutions to the Book Scanning (library scheduling) problem. This solver attempt to find an optimal or near-optimal order in which to sign up libraries, maximizing the total score of scanned books within the given time constraints.
 
 ### Key Features
 
@@ -70,24 +70,8 @@ The `ACOOptimizer` and `AntColonyOptimizer` classes implement Ant Colony Optimiz
 
 ### Usage Example
 
-To use the ACO optimizer, instantiate it with your problem data and an initial solution, then call `optimize()`:
+To use the ACO optimizer, instantiate it with your problem data and an initial solution, then call `run()`:
 
-```python
-from models.aco import ACOOptimizer
-
-aco = ACOOptimizer(
-    data=instance_data,
-    initial_solution=initial_solution,
-    num_ants=50,
-    num_iterations=100,
-    alpha=1.0,
-    beta=2.0,
-    evaporation_rate=0.1,
-    pheromone_deposit=1.0
-)
-best_solution = aco.optimize()
-```
-Alternatively, you can use `AntColonyOptimizer` for a more advanced or alternative implementation:
 ```python
 
 from models.aco import AntColonyOptimizer

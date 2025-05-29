@@ -5,21 +5,18 @@ from models import HyperHeuristicSolver
 from models import Library
 from models import AntColonyOptimizer
 
-
-import os, sys
-import time
-import multiprocessing
+import os
 
 solver = Solver()
 
 directory = os.listdir('input')
 
 instance_files = [
-    # "b_read_on.txt",
+    "b_read_on.txt",
     # "c_incunabula.txt",
     # "e_so_many_books.txt",
     # "d_tough_choices.txt",
-    "f_libraries_of_the_world.txt",
+    # "f_libraries_of_the_world.txt",
     # "B50_L5_D4.txt",
     # "B60_L6_D6.txt",
     # "B70_L8_D7.txt",
@@ -81,7 +78,8 @@ with open(results_file, 'w', newline='') as csvfile:
     for file in instance_files:
         if file.endswith('.txt'):
             scores = []
-            for i in range(1):
+            for i in range(5):
+                solution = None
                 print(f'Processing file: {file}')
                 parser = Parser(f'./input/{file}')
                 Library._id_counter = 0
@@ -102,7 +100,7 @@ with open(results_file, 'w', newline='') as csvfile:
                 solution.export(f'{folder_path}/{file}')
                 print(f'Final score for {file}: {solution.fitness_score:,}')
                 print(f'Solution exported to ./output/{file}')
-                aco = AntColonyOptimizer(data)
+                aco = AntColonyOptimizer(data, solution)
                 final_solution = aco.run()
                 final_solution.enforce_capacity(data)
                 print(f'Score after ACO for {file}: {final_solution.fitness_score:,}')
