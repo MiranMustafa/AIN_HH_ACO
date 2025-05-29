@@ -1,13 +1,14 @@
 import random
 from models.solution import Solution
-# default 50 ants - 200 iterations
 
+
+# default 50 ants - 200 iterations
 
 # e so many books - 50 ants - 200 iterations - 4 runs,  50 ants - 10000 iterations - 1 run
 # c - 25 ants - 50 iterations - 4 runs,  50 ants - 100 iterations - 1 run
 # d - took to long
 # f - 50 ants - 1000 iterations - 4 runs,  50 ants - 10000 iterations - 1 run
-# B2000k_L300_D3.6k.txt - 25 ants - 50 iterations
+# B2000k_L300_D3.6k.txt - 25 ants - 50 iterations - 5 runs
 
 class AntColonyOptimizer:
     """
