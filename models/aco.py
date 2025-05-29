@@ -20,6 +20,7 @@ class AntColonyOptimizer:
     def __init__(self, instance_data, initial_solution: Solution = None ,num_ants=50, num_iterations=10000, alpha=1.0, beta=2.0, evaporation_rate=0.1, Q=1.0):
         """
         instance_data: InstanceData object containing libraries, total_days, book_scores, etc.
+        initial_solution: Solution object - if provided will be used for initial path
         num_ants: number of ants to simulate per iteration.
         num_iterations: total ACO iterations.
         alpha: weight of pheromone importance.
