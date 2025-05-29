@@ -343,5 +343,7 @@ class HyperHeuristicSolver:
 # python validator.py ../input/B95_L5_D12.in ../output/hyper/B95_L5_D12/B95_L5_D12.in
 
 # # python validator.py ../input/e_so_many_books.txt ../output/hyper/e_so_many_books/aco_e_so_many_books.txt
+# # python validator.py ../input/B95k_L2k_D28.txt ../output/hyper/B95k_L2k_D28/aco_B95k_L2k_D28.txt
+
 
 
